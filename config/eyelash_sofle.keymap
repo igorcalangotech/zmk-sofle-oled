@@ -135,6 +135,41 @@
             tap-ms = <0>;
             bindings = <&macro_tap>, <&rgb_ug RGB_COLOR_HSB(169,100,100)>;
         };
+
+        passCB: passCB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(W) &kp O &kp N1 &kp LS(F) &kp N2 &kp N0 &kp N2 &kp N5 &kp N0 &kp N2 &kp N1 &kp N7>;
+            label = "PASSCB";
+        };
+
+        passPB: passPB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(A) &kp C &kp E &kp S &kp S &kp O &kp LS(T) &kp E &kp M &kp P &kp O &kp AT &kp N1 &kp N0 &kp N0 &kp N1 &kp N0 &kp N0>;
+            label = "PASSPB";
+        };
+
+        passCBhd: passCBhd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N8 &kp N4 &kp N6 &kp N5 &kp N1 &kp N3 &kp N2 &kp N1>;
+            label = "PASSCBHD";
+        };
+
+        passPBhd: passPBhd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp I &kp D &kp O &kp N1 &kp N3 &kp MINUS &kp N1>;
+            label = "PASSPBHD";
+        };
+
+        passCBlogin: passCBlogin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(A) &kp C &kp E &kp S &kp S &kp O &kp LS(T) &kp E &kp M &kp P &kp O &kp AT &kp N3 &kp N0 &kp N0 &kp N3 &kp N0 &kp N0>;
+            label = "PASSCBLOGIN";
+        };
     };
 
     keymap {
@@ -181,11 +216,11 @@
 
         layer_3 {
             bindings = <
-&kp EQUAL  &trans          &trans                  &trans  &trans      &trans       &mmv MOVE_UP     &trans  &trans  &trans  &trans          &trans  &trans
-&trans     &kp INSERT      &none                   &trans  &kp LS(F6)  &kp F8       &mmv MOVE_DOWN   &trans  &trans  &trans  &kp LEFT_BRACE  &trans  &trans
-&trans     &kp LA(INSERT)  &kp LA(LC(LS(INSERT)))  &trans  &kp LC(F)   &kp F9       &mmv MOVE_LEFT   &trans  &trans  &trans  &trans          &trans  &trans
-&trans     &trans          &trans                  &trans  &trans      &trans       &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans          &trans  &trans
-&trans     &trans          &trans                  &trans  &trans      &meh_hold    &mkp LCLK        &trans  &trans  &trans  &trans          &trans
+&kp EQUAL  &trans          &trans                  &trans  &trans      &trans       &mmv MOVE_UP     &trans   &trans     &trans        &trans          &trans   &trans
+&trans     &kp INSERT      &none                   &trans  &kp LS(F6)  &kp F8       &mmv MOVE_DOWN   &trans   &trans     &trans        &kp LEFT_BRACE  &trans   &trans
+&trans     &kp LA(INSERT)  &kp LA(LC(LS(INSERT)))  &trans  &kp LC(F)   &kp F9       &mmv MOVE_LEFT   &trans   &trans     &trans        &trans          &trans   &trans
+&trans     &trans          &trans                  &trans  &trans      &trans       &mmv MOVE_RIGHT  &passCB  &passCBhd  &passCBlogin  &passPBhd       &passPB  &trans
+&trans     &trans          &trans                  &trans  &trans      &meh_hold    &mkp LCLK        &trans   &trans     &trans        &trans          &trans
             >;
 
             display-name = "UTIL";
