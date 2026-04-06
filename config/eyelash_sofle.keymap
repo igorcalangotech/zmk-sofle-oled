@@ -37,14 +37,6 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
-&lt {
-    tapping-term-ms = <150>;
-};
-
-&mt {
-    tapping-term-ms = <150>;
-};
-
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -66,7 +58,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mt LEFT_GUI Z>, <&kp LEFT_GUI>;
+            bindings = <&mt LEFT_GUI Z>, <&kp LEFT_WIN>;
         };
 
         td_d2: td_d2 {
