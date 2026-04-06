@@ -37,6 +37,14 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
+&lt {
+    tapping-term-ms = <150>;
+};
+
+&mt {
+    tapping-term-ms = <150>;
+};
+
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -50,28 +58,28 @@
         td_d0: td_d0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mt LEFT_CONTROL LEFT_CONTROL>, <&kp LEFT_GUI>;
         };
 
         td_d1: td_d1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mt LEFT_GUI Z>, <&kp LEFT_GUI>;
         };
 
         td_d2: td_d2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp MINUS>, <&kp DELETE>;
         };
 
         td_d3: td_d3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&lt SYM SPACE>, <&kp DOT>;
         };
     };
