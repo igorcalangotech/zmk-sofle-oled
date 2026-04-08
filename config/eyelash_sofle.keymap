@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mt LEFT_GUI Z>, <&kp LEFT_WIN>;
+            bindings = <&kp Z>, <&kp LEFT_WIN>;
         };
 
         td_d2: td_d2 {
@@ -177,11 +177,11 @@
 
         layer0 {
             bindings = <
-&mt EQUAL ESC   &kp N1            &kp N2        &kp N3       &kp N4         &kp N5          &kp UP_ARROW     &kp N6         &kp N7       &kp N8     &kp N9           &kp N0              &td_d2
-&kp TAB         &kp Q             &kp W         &kp E        &kp R          &kp T           &kp DOWN_ARROW   &kp Y          &lt UTIL U   &kp I      &kp O            &kp P               &kp BSLH
-&kp LEFT_SHIFT  &kp A             &kp S         &lt MOUSE D  &kp F          &kp G           &kp LEFT_ARROW   &kp H          &kp J        &kp K      &kp L            &kp SEMI            &mt RIGHT_SHIFT SQT
-&td_d0          &td_d1            &lt FN5 X     &kp C        &kp V          &kp B           &kp RIGHT_ARROW  &kp N          &kp M        &kp COMMA  &kp DOT          &mt RIGHT_ALT FSLH  &mt LEFT_CONTROL ENTER
-&kp C_MUTE      &kp LEFT_CONTROL  &kp LEFT_GUI  &mo BT       &lt NAV ENTER  &kp LEFT_ALT    &kp BACKSPACE    &kp BACKSPACE  &lt 1 SPACE  &mo SYS    &kp RIGHT_SHIFT  &kp DELETE
+&mt EQUAL ESC     &kp N1            &kp N2                      &kp N3       &kp N4         &kp N5          &kp UP_ARROW     &kp N6         &kp N7       &kp N8     &kp N9           &kp N0              &td_d2
+&kp TAB           &kp Q             &kp W                       &kp E        &kp R          &kp T           &kp DOWN_ARROW   &kp Y          &lt UTIL U   &kp I      &kp O            &kp P               &kp BSLH
+&kp LEFT_SHIFT    &kp A             &kp S                       &lt MOUSE D  &kp F          &kp G           &kp LEFT_ARROW   &kp H          &kp J        &kp K      &kp L            &kp SEMI            &mt RIGHT_SHIFT SQT
+&kp LEFT_CONTROL  &td_d1            &lt FN5 X                   &kp C        &kp V          &kp B           &kp RIGHT_ARROW  &kp N          &kp M        &kp COMMA  &kp DOT          &mt RIGHT_ALT FSLH  &mt LEFT_CONTROL ENTER
+&kp C_MUTE        &kp LEFT_COMMAND  &mt PRINTSCREEN C_AC_PRINT  &mo BT       &lt NAV ENTER  &kp LEFT_ALT    &kp BACKSPACE    &kp BACKSPACE  &lt 1 SPACE  &mo SYS    &kp RIGHT_SHIFT  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
