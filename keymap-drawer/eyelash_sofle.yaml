@@ -55,7 +55,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-command$$
-  - {t: AC PRINT, h: PRINTSCREEN}
+  - {t: PRINTSCREEN, h: AC PRINT}
   - BT_OLD1
   - {t: '$$mdi:keyboard-return$$', h: NAV}
   - $$mdi:apple-keyboard-option$$
